@@ -1,0 +1,28 @@
+<!DOCTYPE html>	
+<html ng-app='blocChat'>
+	<head>
+	</head>
+	
+	<body>
+		<!-- angular -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<!-- angularFire-->
+		<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+		<!-- fireBase -->
+		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyCnLIgKtQen3IJgEHR8v7JKzNSvDCVFzKs",
+			authDomain: "chartroom-a7e2b.firebaseapp.com",
+			databaseURL: "https://chartroom-a7e2b.firebaseio.com",
+			projectId: "chartroom-a7e2b",
+			storageBucket: "chartroom-a7e2b.appspot.com",
+			messagingSenderId: "296698120680"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="scripts/serices/Room.js"></script>
+	</body>
+</html>
