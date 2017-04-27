@@ -13,9 +13,9 @@
 				controller: ''  ,
 				templateUrl: '/'
 			})
-			.state('rooms', {
-				url: '/rooms',
-				controller: 'RoomCtrl as rooms',
+			.state('chatRooms', {
+				url: '/chatRooms',
+				controller: 'RoomCtrl as chatRooms',
 				templateUrl: '/'
 			})
 	}
@@ -23,7 +23,7 @@
 	angular
 		.module('blocChat', [ui.router, firebase])
 		.config(config);
-	
+		
 })();
 
 
