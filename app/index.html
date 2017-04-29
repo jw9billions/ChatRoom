@@ -7,12 +7,13 @@
 		
 	</head>
 	<body ng-controller="RoomCtrl" ng-repeat="room in rooms">
+		<ui-view></ui-view>
 		
 		<!-- angular -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 		<!-- angularFire-->
 		<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 		<!-- fireBase -->
 		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
 		<script>
@@ -27,11 +28,10 @@
 			};
 			firebase.initializeApp(config);
 		</script>
-		<ui-view></ui-view>
 		<script src="scripts/app.js"></script>
-		<script src="scripts/serices/Room.js"></script>
+		<!-- <script src="scripts/services/Room.js"></script> -->
+		<script src="scripts/controllers/RoomCtrl.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	</body>

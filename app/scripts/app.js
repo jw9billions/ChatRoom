@@ -1,6 +1,5 @@
-
 (function(){
-	function config('stateProvider', 'locationProvider'){
+	function config($stateProvider, $locationProvider){
 		$locationProvider
          .html5Mode({
              enabled: true,
@@ -8,15 +7,15 @@
          });
 		
 		$stateProvider
-			.state('mainView', {
-				url: '/',	   
-				controller: ''  ,
-				templateUrl: '/'
-			})
+			// .state('mainView', {
+			// 	url: '/',	   
+			// 	controller: ''  ,
+			// 	// templateUrl: '/'
+			// })
 			.state('chatRooms', {
 				url: '/chatRooms',
 				controller: 'RoomCtrl as chatRooms',
-				templateUrl: '/'
+				// templateUrl: '/'
 			})
 	}
 	
