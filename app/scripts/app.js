@@ -1,6 +1,6 @@
 
 (function(){
-	function config('stateProvider', 'locationProvider'){
+	function config($stateProvider, $locationProvider){
 		$locationProvider
          .html5Mode({
              enabled: true,
@@ -9,9 +9,15 @@
 		
 		$stateProvider
 			.state('mainView', {
-				url: '/',	   
+				url: '/mainView',	   
 				controller: ''  ,
 				templateUrl: '/'
+			})
+			.state('home', {
+				url:'/home',
+				controller: 'HomeCtrl as home',
+				templateUrl: '/template/home.html'
+			
 			})
 			.state('chatRooms', {
 				url: '/chatRooms',
@@ -21,7 +27,7 @@
 	}
 	
 	angular
-		.module('blocChat', ['ui.router', 'firebase'])
+		.module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
 		.config(config);
 })();
 
