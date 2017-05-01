@@ -19,11 +19,6 @@
 				templateUrl: '/template/home.html'
 			
 			})
-			.state('chatRooms', {
-				url: '/chatRooms',
-				controller: 'RoomCtrl as chatRooms',
-				templateUrl: '/'
-			})
 	}
 	
 	angular
