@@ -1,12 +1,29 @@
 (function(){
-	function ModalCtrl ($uibModal){
-		this.modal = $uibModal.open();
-		this.modal = $uibModal.close();
-		this.modal = $uibModal.submit();
-	}
+	function ModalCtrl($uibModal, $log, Room) {
+			   this.open = function() {
+					var modalInstance = $uibModal.open({
+						animation: this.animationsEnabled,
+						templateUrl : '/templates/modal.html',
+						controller: 'ModalInstanceCtrl',
+						controllerAs: 'modal'
+
+					});
+
+				   	modalInstance.result.then(function(name) {
+					   this.room = name;
+					   Room.create(this.room);
+				   	}, function() {
+					   $log.info('Modal dismissed at ' + new Date());
+				   	});
+			   };
+
+			   this.toggleAnimation = function () {
+					this.animationsEnabled = !this.animationsEnabled;
+			   };
+    }
 	
 	angular
-		.module('blocChat', ['ui.bootstrap'])
+		.module('blocChat')
 		.controller('ModalCtrl', ['$uibModal', ModalCtrl]);
 })();
 

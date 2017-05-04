@@ -1,9 +1,1 @@
-<section class='chat-rooms'  ng-controller="HomeCtrl as home">
-	<div class='navbar'>
-		<h1 class="title">{{Bloc Chat}}</h1>
-	</div>
-	
-	<div ng-controller="RoomCtrl as chatRooms" ng-repeat='room in chatRooms.rooms'>
-		
-	</div>
-</section>
+ <h1 ng-repeat="room in home.rooms">{{room[$index]}}</h1>
