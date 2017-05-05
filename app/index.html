@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<ui-view></ui-view>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
   		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
@@ -24,12 +25,13 @@
 			};
 			firebase.initializeApp(config);
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-cookies.js"></script>
 		<script src="scripts/app.js"></script>
 		<script src="scripts/services/Room.js"></script>
 		<script src="scripts/controllers/HomeCtrl.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	  
+		<script src="scripts/controllers/ModalCtrl.js"></script>
+		<script src="scripts/controllers/ModalInstanceCtrl.js"></script>
 	</body>
 </html>

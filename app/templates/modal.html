@@ -1,0 +1,18 @@
+<div>
+	<div class="modal-header">
+		<h2 class="modal-title">Create New Room</h2>
+	</div>
+	<div class="modal-body">
+		Enter a room name:
+		<form ng-submit="modal.ok()">
+			<div class="input-group animated fadeIn">
+                <input type="text" class="form-control finderBar" ng-model="modal.name" title="name" placeholder="Your room name here" autofocus>
+				{{modal.name}}
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-success" type="button" ng-click="modal.ok()">Create Room</button>
+		<button class="btn btn-danger"  type="button" ng-click="modal.cancel()">Cancel</button>
+	</div>
+</div>

@@ -1,1 +1,25 @@
- <h1 ng-repeat="room in home.rooms">{{room[$index]}}</h1>
+<section>
+	<div class="navbar">
+		<h1 class="logo">Bloc Chat</h1>
+		<div ng-controller="ModalCtrl as modals">
+			<button type="button" class="btn btn-default" ng-click="modals.open()">New Room</button>
+		</div>
+		<h4 class="room" ng-repeat="room in home.rooms">
+			<p ng-click="home.changeRoom(room)">{{room.$value}}</p>
+		</h4>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<h2>{{ currentRoom.$value}}</h2>
+		<table>
+			
+		
+		</table>
+	</div>
+</section>
+
+
+
+
+<h1 ng-repeat="room in home.rooms">{{room[$index]}}</h1>
