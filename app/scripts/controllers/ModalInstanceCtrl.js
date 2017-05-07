@@ -1,6 +1,6 @@
 (function() {
     function ModalInstanceCtrl($uibModalInstance) {
-       this.ok = function() {
+        this.ok = function() {
             this.room = {name: ''};
             console.log(this.name);
             $uibModalInstance.close(this.name);
@@ -15,3 +15,4 @@
         .module('blocChat')
         .controller('ModalInstanceCtrl', ['$uibModalInstance', ModalInstanceCtrl]);
 })();
+

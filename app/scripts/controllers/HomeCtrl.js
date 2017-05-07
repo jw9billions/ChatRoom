@@ -20,8 +20,7 @@
         this.send = Message.send;
     }
 
-
     angular
         .module('blocChat')
-        .controller('HomeCtrl', [HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$scope', HomeCtrl]);
 })();

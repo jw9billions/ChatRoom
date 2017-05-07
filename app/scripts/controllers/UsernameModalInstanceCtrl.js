@@ -10,5 +10,5 @@
 
     angular
         .module('blocChat')
-        .controller('usernameModalInstanceCtrl', ['$uibModalInstance', '$scope', usernameModalInstanceCtrl]);
+        .controller('UsernameModalInstanceCtrl', ['$uibModalInstance', '$scope', UsernameModalInstanceCtrl]);
 })();

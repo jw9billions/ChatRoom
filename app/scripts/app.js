@@ -1,19 +1,20 @@
 (function() {
-     function config($locationProvider, $stateProvider) {
-         $locationProvider
-             .html5Mode({
-                 enabled: true,
-                 requireBase: false
-              });
- 
-         $stateProvider
-             .state('home', {
-                 url: '/',
-                 controller: 'HomeCtrl as home',
-                 templateUrl: '/templates/home.html'
-             });		
-     }
-	
+
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+
+        $stateProvider
+            .state('home', {
+                url: '/',
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/home.html'
+            })
+    }
+
     function BlocChatCookies($cookies, $uibModal) {
         var currentUser = $cookies.get('blocChatCurrentUser');
         console.log(currentUser);
@@ -36,11 +37,10 @@
             });
         }
     }
-     
-     angular
-         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
-         .config(config)
-	 	 .run(['$cookies', '$uibModal', BlocChatCookies]);
- })();
 
+    angular
+        .module('blocChat', ['ngCookies', 'ui.bootstrap','ui.router', 'firebase'])
+        .config(config)
+        .run(['$cookies', '$uibModal', BlocChatCookies]);
 
+})();
