@@ -1,6 +1,14 @@
+
+A real-time chat client using AngularJS and Firebase.
+Demo: https://chemist-alec-76084.netlify.com/.
+
+Bloc-chat is a single-page application that allows users to chat with each other in various chat rooms. The application first prompts a user to enter a username via a modal and then saves it to the browser with cookies. Once a username is set, the user can easily click to enter any rooms that they want to chat in. They can also create a new chat room if there isn't one for a topic they want to discuss.
+
+
+Detail steps:
 ## Bloc Frontend Project Starter
 
-A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
+A starter application in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
 
 ## Pull Down the Code
 
